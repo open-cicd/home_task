@@ -15,6 +15,8 @@
   { "userId": "user1", "name": "add_revenue", "value": 1 }
   <br/>
   { "userId": "user2", "name": "subtract_revenue", "value": 12 }
+
+# Run
 * npm run start <-- will start the server  
 * npm run client <-- will execute the client
 * npm run data_proc <-- will execute the data_processor
