@@ -2,9 +2,7 @@
 
 * npm i
 * PostgresSQL binded to ip "0.0.0.0" on port 5432 with no password
-* events.jsonl file in the project's root level file that holds the events data
-  <br/>
-  example:
+* events.jsonl file in the project's root level that holds the events data for example:
   <br/>
   { "userId": "user1", "name": "add_revenue", "value": 98 }
   <br/>
