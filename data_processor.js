@@ -39,7 +39,9 @@ async function processData() {
 
     // Update the user revenues in the database
     for (const [userId, revenue] of userRevenues) {
-        await pool.query('UPDATE users SET revenue = revenue + $1 WHERE userId = $2', [revenue, userId]);
+
+        const query = "INSERT INTO users (userId, revenue) VALUES ($1, $2) ON CONFLICT (userId) DO UPDATE SET revenue = $2 WHERE users.userId = $1";
+        await pool.query(query, [userId,revenue ]);
     }
 
     console.log('Done processing data.');
